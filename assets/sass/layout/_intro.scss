@@ -8,12 +8,16 @@
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url('images/intro.svg');
-		background-position: top right;
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-
+		//background-image: url('images/intro.svg');
+		//background-position: top right;
+		//background-repeat: no-repeat;
+		//background-size: 100% 100%;
+		background: rgb(200,229,248);
+		background: linear-gradient(90deg, rgba(200,229,248,1) 00%, rgba(74,145,198,1) 100%);
+		//background: rgb(74,145,198);
+		//background: linear-gradient(90deg, rgba(74,145,198,1) 0%, rgba(200,229,248,1) 100%);
 		p {
+			color: _palette(bg);
 			font-size: 1.25em;
 
 			@include breakpoint('<=medium') {
@@ -29,5 +33,11 @@
 
 		@include breakpoint('<=large') {
 			background-attachment: scroll;
+		}
+		h1 {
+			color: _palette(bg);
+		}
+		a {
+			color: _palette(bg) !important;
 		}
 	}
